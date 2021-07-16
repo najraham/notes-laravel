@@ -12,7 +12,7 @@
 */
 
 Route::group(['middleware'=> ['auth']], function () {
-    Route::get('/cards', 'CardsController@index')->name('card_index');
+    Route::get('/', 'CardsController@index')->name('card_index');
 
     Route::get('/card/{card}', 'CardsController@show')->name('show_card');
     Route::get('/cards/add', 'CardsController@add')->name('add_card');

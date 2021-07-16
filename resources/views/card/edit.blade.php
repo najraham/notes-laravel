@@ -5,7 +5,7 @@
         Edit Card
     </h1>
 
-    <form action="/cards/{{ $card->id }}" method="POST">
+    <form action="{{route('update_card', $card->id) }}" method="POST">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
         <div class="form-group">

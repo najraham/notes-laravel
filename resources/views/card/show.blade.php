@@ -16,7 +16,7 @@
     <hr>
     <h3>Add new note</h3>
 
-    <form action="/cards/{{ $card->id }}/notes" method="POST">
+    <form action="{{route('add_note', $card->id) }}" method="POST">
         {{ csrf_field() }}
         <div class="form-group">
             <textarea name="body" id="body" cols="20" rows="5" class="form-control {{ $errors->has('body') ? 'border-danger': '' }}"></textarea>

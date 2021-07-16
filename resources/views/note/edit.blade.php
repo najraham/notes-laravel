@@ -5,7 +5,7 @@
         Edit Note
     </h1>
 
-    <form action="/notes/{{ $note->id }}" method="POST">
+    <form action="{{ route('update_note', $note->id) }}" method="POST">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
         <div class="form-group">
